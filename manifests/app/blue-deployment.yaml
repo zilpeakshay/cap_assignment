@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-blue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: node
+        version: blue
+    spec:
+      containers:
+      - name: node
+        image: zilpeakshay/node-app:blue
+        ports:
+        - containerPort: 3000

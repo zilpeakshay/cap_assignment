@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node
+      version: green
+  template:
+    metadata:
+      labels:
+        app: node
+        version: green
+    spec:
+      containers:
+      - name: node
+        image: zilpeakshay/node-app:green
+        ports:
+        - containerPort: 3000

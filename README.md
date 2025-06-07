@@ -1,3 +1,6 @@
+## IMPORTANT NOTE
+If there are many microservices in architecture then optimal way is to go with ingress, here we have used plane load balancer as only single microservice.
+
 ## Overview
 This project demonstrates deploying a Node.js app using Blue-Green strategy on an EKS cluster with Jenkins.
 
@@ -29,9 +32,6 @@ Then run:
 ```bash
 kubectl apply -f manifests/app/service.yaml
 ```
-
-###IMPORTANT NOTE
-If there are many microservices in architecture then optimal way is to go with ingress, here we have used plane load balancer as only single microservice.
 
 ## Cleanup
 ```bash
